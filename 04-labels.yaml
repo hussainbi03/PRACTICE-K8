@@ -2,7 +2,7 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: labels
-  lables:
+  labels:
     project: expense
     env: dev
     component: dev
