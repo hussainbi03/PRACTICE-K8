@@ -20,6 +20,8 @@ spec:
       containers:
       - name: nginx
         image: hussainbi/deploy:1.0
+        ports:
+        - containerPort: 80
 ---
 kind: Service
 apiVersion: v1
