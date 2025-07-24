@@ -1,0 +1,25 @@
+kind: Service
+apiversion: v1
+metadata:
+  name: nginx
+selector:
+  project: expense
+  env: dev
+  component: backend
+ports:
+- protocol: tcp
+  port: 80
+  targetport: 80
+---
+kind: Pod
+apiversion: v1
+metadta:
+  name: nginx
+  labels:
+    project: expense
+    env: dev
+    component: backend
+spec:
+  containers:
+  - name: nginx
+    image: nginx        
