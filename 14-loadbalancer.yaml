@@ -12,6 +12,7 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
+    nodePort: 30007
 ---
 kind: Pod
 apiVersion: v1
@@ -25,4 +26,3 @@ spec:
   containers:
   - name: nginx
     image: nginx
-              
