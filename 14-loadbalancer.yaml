@@ -1,0 +1,28 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: loadbalncer
+spec:
+  type: LoadBalancer
+  selector:
+    project: expense
+    env: preprod
+    component: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod-lb
+  labels:
+    project: expense
+    env: preprod
+    component: backend  
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+              
