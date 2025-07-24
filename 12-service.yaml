@@ -1,5 +1,5 @@
 kind: Service
-apiversion: v1
+apiVersion: v1
 metadata:
   name: nginx
 selector:
@@ -12,7 +12,7 @@ ports:
   targetport: 80
 ---
 kind: Pod
-apiversion: v1
+apiVersion: v1
 metadta:
   name: nginx
   labels:
