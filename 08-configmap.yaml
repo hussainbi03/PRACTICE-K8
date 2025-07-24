@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: CongigMap
+metadata:
+  name: config
+data:
+  course: "kubernetes"
+  trainer: :"shiva"
