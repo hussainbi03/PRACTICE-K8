@@ -19,4 +19,20 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: hussainbi/deploy:1.0           
+        image: hussainbi/deploy:1.0
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx
+spec:
+  selector:
+    type: LoadBalancer
+    project: expense
+    env: uat
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80  
+    nodePort: 30007
+
