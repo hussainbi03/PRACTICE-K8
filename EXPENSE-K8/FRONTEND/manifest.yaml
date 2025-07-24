@@ -1,0 +1,41 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: frontend
+  namespace: expense
+  labels:
+    project: expense
+    env: dev
+    component: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      project: expense
+      env: dev
+      component: frontend
+  template:
+    metadata:
+      labels:
+        project: expense
+        env: dev
+        component: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: hussainbi/frontend:1.0.0
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: frontend
+  namespace: expense
+spec:
+  selector: # labels are used as selectors
+    project: expense
+    env: dev
+    component: frontend
+  ports:
+  - protocol: TCP
+    port: 8080 # service port
+    targetPort: 8080                
