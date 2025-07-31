@@ -4,5 +4,5 @@ metadata:
   name: ebs-sc
   namespace: expense
 provisioner: ebs.csi.aws.com
-reclaimPolicy: Retain
+reclaimPolicy: Delete
 volumeBindingMode: WaitForFirstConsumer
