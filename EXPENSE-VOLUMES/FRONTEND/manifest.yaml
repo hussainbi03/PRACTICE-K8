@@ -129,7 +129,7 @@ spec:
     port: 80 # service port
     targetPort: 8080   
 ---
-piVersion: autoscaling/v2
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: frontend
