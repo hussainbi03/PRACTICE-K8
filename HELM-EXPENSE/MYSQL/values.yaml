@@ -1,0 +1,4 @@
+statefulset:
+  replicas: 2
+  imageVersion: 1.0.0
+  storage: 2Gi
