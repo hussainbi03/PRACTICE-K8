@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: frontend
+  name: nginx
   namespace: expense
 data:
   nginx.conf: |
@@ -87,9 +87,9 @@ spec:
         project: expense
     spec:
       volumes:
-      - name: frontend
+      - name: nginx
         configMap:
-          name: frontend
+          name: nginx
           items:
             - key: nginx.conf
               path: nginx.conf
@@ -108,7 +108,7 @@ spec:
         ports:
         - containerPort: 8080
         volumeMounts:
-        - name: frontend
+        - name: nginx
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
           readOnly: true
