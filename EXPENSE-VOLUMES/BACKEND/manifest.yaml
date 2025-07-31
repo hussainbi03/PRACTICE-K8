@@ -35,7 +35,6 @@ spec:
         envFrom:
         - configMapRef:
             name: backend
-
 ---
 kind: Service
 apiVersion: v1
@@ -45,7 +44,7 @@ metadata:
 spec:
   selector: # labels are used as selectors
     project: expense
-    env: dev
+    tier: backend
     component: backend
   ports:
   - protocol: TCP

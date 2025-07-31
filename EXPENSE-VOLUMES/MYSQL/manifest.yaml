@@ -26,12 +26,12 @@ metadata:
   labels:
     app: mysql
     project: expense
-    tier: db
+    teir: DB
 spec:
   selector:
     app: mysql
     project: expense
-    tier: db
+    teir: DB
   ports:
   - protocol: TCP
     port: 3306 # service port
