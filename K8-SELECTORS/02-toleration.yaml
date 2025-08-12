@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: selector-demo
+  name: toleration
 spec:
   nodeSelector:
-      topology.kubernetes.io/zone: us-east-1c
+      topology.kubernetes.io/zone: us-east-1b
   containers:
   - name: nginx
     image: nginx
