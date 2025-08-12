@@ -5,4 +5,4 @@ metadata:
 spec:
   containers:
   - name: nginx
-    image: hussainbi/ingres:1.0.0  
+    image: hussainbi/ingress:1.0.0  
