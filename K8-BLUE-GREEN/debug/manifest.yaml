@@ -7,4 +7,4 @@ spec:
   # one pod can contain multiple containers
   containers:
   - name: debug
-    image: joindevops/debug:1.0.0
+    image: hussainbi/debug:1.0.0
