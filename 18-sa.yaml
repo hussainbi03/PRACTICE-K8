@@ -33,7 +33,7 @@ metadata:
   namespace: expense
 spec:
   # one pod can contain multiple containers
-  serviceAccount: expense-mysql-secret
+  serviceAccount: aws-expense-mysql-secret
   initContainers:
   - name: awscli
     image: amazon/aws-cli
